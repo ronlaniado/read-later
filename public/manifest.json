@@ -1,16 +1,18 @@
 {
-    "short_name": "Read Later",
-    "name": "Read Later",
-    "description": "Read Later is a chrome extension that provides a better alternative to traditional bookmarks in the browser.",  
-    "version": "1.0",
-    "manifest_version": 2,
-    "background": {
-        "scripts": ["background.js"],
-        "persistent": false
-    },
-    "browser_action": {
-        "default_popup": "index.html"
-     },
-     "content_security_policy": "script-src 'self' 'sha256-9uGsoTna7edLuYUCRc4kDViw4UgFgksO1Alzno4JLU0'; object-src 'self'",
-    "permissions": ["declarativeContent", "storage"]
+  "short_name": "Read Later",
+  "name": "Read Later",
+  "description": "Read Later is a chrome extension that provides a better alternative to traditional bookmarks in the browser.",
+  "version": "1.0",
+  "manifest_version": 3,
+  "background": {
+    "service_worker": "worker.js"
+  },
+  "action": {
+    "default_popup": "index.html"
+  },
+  "content_security_policy": {
+    "script-src": "self sha256-9uGsoTna7edLuYUCRc4kDViw4UgFgksO1Alzno4JLU0",
+    "object-src": "self"
+  },
+  "permissions": ["contextMenus", "storage"]
 }
