@@ -1,0 +1,25 @@
+.container {
+    margin: 10px;
+    width: 100%;
+    height: 50px;
+    align-items: center;
+    background-color: rgb(224, 224, 224);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 15px 0 15px;
+}
+
+.title {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.leftContainer {
+    text-align: left;
+}
+
+.rightContainer {
+    text-align: right;
+}
